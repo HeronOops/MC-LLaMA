@@ -1,0 +1,19 @@
+### 1.1 What Is Model Checking?
+
+The Model Checking problem is easy to state:
+
+Let $M$ be a Kripke structure (i.e., state-transition graph). Let $f$ be a formula of temporal logic (i.e., the specification). Find all states 5 of $M$ such that $M,s\models f$
+
+We used the term Model Checking because we wanted to determine if the tempo ral formula $f$ was true in the Kripke structure $M$ , i.e., whether the structure $M$ was a model for the formula $f$ .Some people believe erroneously that the use of the term “model refers to the dictionary meaning of this word (e.g., a miniature representation of something or a pattern of something to be made) and indicates that we are dealing with an abstraction of the actual system under study. Emerson and I gave a polynomial algorithm for solving the Model Checking
+
+Problem for the logic CTL. The figure below shows the structure of a typical Model Checking system. A preprocessor extracts a state transition graph from a program or circuit. The Model Checking engine takes the state transition graph and a temporal formula and determines whether the formula is true or not (Figure 1)-
+
+![](https://storage.simpletex.cn/view/fOr1ZRVop31gLCtlHXMPLD5cZNTcMFa7X)
+
+Fig.1. Model Checker Structure
+
+### 1.2Advantages of Model Checking
+
+Model Checking has a number of advantages compared to other verification techniques such as automated theorem proving or proof checking. A partial list of some of these advantages is given below:
+
+------------------------------------------------------------------

@@ -1,0 +1,26 @@
+Please provide a high-level description for a BPMN 2.0 <process> snippet, focusing on the provided BPMN structure".
+Do not output actual BPMN XML code; instead, give a concise textual overview that explains:
+1. The primary events, tasks, gateways, and data objects or sub-processes in the flow (based on the BPMN elements listed below).
+2. How these elements connect in a realistic industrial scenario under the umbrella of the specified BPMN structure approach.
+3. The rationale for each step within a typical industrial application context.
+
+Ensure the process logic is feasible, follows BPMN 2.0 standards, and would be executable if implemented in XML.
+
+Available BPMN Elements:
+- Gateways: Exclusive gateway, Parallel gateway, Event-based gateway
+- Tasks: Task, User task, Service task, Business rule task, Script task
+- Sub-processes: Call activity, Transaction, Event sub-process, Sub-process (collapsed), Sub-process (expanded)
+- Events: (Start, Intermediate, Boundary, End, etc.)
+- Data: Data store reference, Data object reference
+- Participants: Expanded pool/participant, Empty pool/participant
+
+Output Format:
+- Produce only a concise textual description of the <process> logic (no actual XML).
+- Emphasize how the specified BPMN structure shapes the flow, connections, and triggers between elements.
+- Summarize how each step triggers the next in a straightforward manner.
+
+Example (simplified illustration, not real XML):
+{description_example}
+
+BPMN structure:
+{bpmn_structure}

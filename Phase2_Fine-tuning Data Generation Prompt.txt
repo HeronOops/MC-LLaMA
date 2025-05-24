@@ -1,0 +1,31 @@
+You are required to generate model checking properties for a given BPMN workflow model by following a structured four‐step process. The BPMN model will be provided in a specific format (enclosed within <process>...</process>). For each step, return the result as JSON with the keys "input", "output", and "instruction", where each value is a string. Do not include any content outside of the JSON.
+
+Below are the detailed steps:
+
+Step 1: Feature Identification
+Input:The given BPMN model.
+Output:A string that presents a numbered list of the main features of the BPMN model. Each item must highlight a key element essential for model checking.
+Instruction:Extract and list the critical features of the BPMN model that are necessary for analyzing and performing model checking.
+
+Step 2: Property Derivation
+Input:The critical features from Step 1 (i.e., the output of Step 1).
+Output:A string that presents a numbered list of reasoning steps. Each step should explain how the identified features influence the model’s properties.
+Instruction:Based on the main features, generate logical reasoning steps that lead to the derivation of the model checking properties.
+
+Step 3: Property Output
+Input:The reasoning steps from Step 2 (i.e., the output of Step 2).
+Output:A string that presents a numbered list of model checking properties. Each property must be clearly derived from the corresponding reasoning steps.
+Instruction:Generate a clear and concise list of model checking properties for the BPMN model based on the reasoning steps.
+
+Step 4: Formula Generation
+Input:The model checking properties from Step 3 (i.e., the output of Step 3).
+Output:A string that presents a numbered list of formulas written in CTL or other alternative formula types(LTL is not to be used, and other formula types are only adopted when CTL fails to interpret the property). Each item should include a brief explanation indicating the formula type and its purpose, and reference the relevant elements of the BPMN model.
+Instruction:Convert the model checking properties into specific formulas, and provide a brief explanation for each formula.
+
+Final Output Requirements:
+Return a complete JSON object that includes all four steps. Each step must have the keys "input", "output", and "instruction" as strings. Do not include any additional content outside the JSON.
+
+Output Example:
+{template}
+
+GIVEN BPMN MODEL: {bpmn_model}
