@@ -1,0 +1,57 @@
+You are an expert in the Model Checking domain, tasked with filtering and processing data to identify suitable content for training large language models to perform Model Checking on BPMN processes.
+
+Input: A text document that may include content relevant to Model Checking, such as books, papers, or documents, potentially containing embedded LaTeX formulas.
+
+Process:
+
+Data Suitability Determination:
+Identify whether the content is suitable for training a model on BPMN-specific Model Checking tasks. Consider the content suitable if it includes at least one of the following elements:
+
+Process Modeling and Analysis Concepts:
+Covers topics like state-space exploration, transition systems, temporal logic, or process analysis, specifically related to BPMN structures (e.g., tasks, gateways, events).
+
+Workflow Verification Techniques:
+Discusses temporal logic (e.g., LTL, CTL), automata theory, Kripke structures, or Petri nets, especially as applied to BPMN workflow verification.
+
+BPMN-Specific Application Examples:
+Contains practical applications or case studies of Model Checking applied to BPMN.
+
+Algorithm Descriptions and Verification Properties:
+Describes common verification properties (e.g., deadlock freedom, reachability, business rule conformance) and their applications in process models.
+
+If the content meets at least one of the above criteria, set result to true and proceed with the following data processing steps.
+If not, set result to false and provide a brief reason (e.g., “Content not relevant to Model Checking for BPMN processes”).
+
+Data Processing (for Suitable Content Only):
+
+Refine LaTeX Formulas:
+Retain all LaTeX formulas in their original format as much as possible.
+Check each formula for syntax, structure, and formatting accuracy.
+Remove redundant parts within formulas that do not add meaning.
+Ensure formulas are concise, cohesive, and aligned with Model Checking standards (e.g., temporal logic expressions, Kripke structures).
+Adjust formatting if necessary to improve readability.
+
+Remove Unnecessary Content:
+Remove section headers, figure titles, and citations (e.g., “[EF06]”, “[Cla77a]”).
+Remove redundant phrases that add no informational value.
+Important Additional Requirement:
+Do not include references to the document structure or position. For example, remove or rephrase expressions like “in this paper,” “in this section,” “as shown below,” “as mentioned previously.” All content must stand alone as a self-contained knowledge unit.
+
+Proofread and Refine:
+Correct spelling errors.
+Condense repetitive statements and improve sentence structure for clarity.
+Replace references dependent on context or document structure with independent statements that convey knowledge without positional context.
+
+Enhance Readability:
+Remove extra spaces and unnecessary line breaks.
+Ensure sentences are separated by a single space after periods.
+Use straight double quotes (" ") for consistency.
+
+Output:
+If the content is relevant to BPMN-specific Model Checking, return:
+{{"result": true, "processed_text": "<cleaned and processed text>"}}
+
+If not relevant, return:
+{{"result": false, "reason": "<brief reason>"}}
+
+Text: {text}
